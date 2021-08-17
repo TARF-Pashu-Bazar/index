@@ -4,6 +4,13 @@
    <meta charset="utf-8">
    <title></title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--Faq-->
+   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+   <!--Navbar-->
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- -->
    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700">
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,6 +19,213 @@
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
    <style type="text/css">
+   /*FAQ*/
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow: scroll;
+
+}
+
+#help{ 
+    align-items: center;
+    background-image: linear-gradient(-180deg,  hsl(24, 19%, 88%),hsl(7, 55%, 72%)); 
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    font-weight: 400;
+    height: 100vh;
+    justify-content: center;
+    padding: 0;
+}*/
+
+.faq { 
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 50px 25px;
+    margin: 150px 5% 5% 5%;
+    min-width: 320px;
+    max-width: 320px;
+}
+@media only screen and (min-width:1000px){
+#help{
+  max-height: 70vh;
+}}
+.faq__logo {
+    background: url('https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-mobile.svg') center bottom no-repeat;
+    background-color: transparent;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 0;
+    margin-top: -200px;
+    }
+
+.faq__logo__image {
+    margin-left: -13px;
+    margin-bottom: 13px;
+}
+
+.faq__heading { 
+    color: var(--blue-dark);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center; 
+}
+
+.faq__detail {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin: 20px 0 0 0;
+    padding: 5px 0 20px 0;
+}
+
+.faq__summary:hover,
+.faq__summary:active { 
+    color: var(--orange);
+    cursor: pointer; 
+}
+
+.faq__detail[open] > .faq__summary { 
+    font-weight: 700; 
+}
+
+.faq__summary {
+    list-style: none;
+  }
+
+.faq__summary::-webkit-details-marker {
+    display: none;
+  }
+
+.faq__summary { 
+    display: block;
+    padding: 0;
+    position: relative;
+    text-align: right;
+}
+
+    
+.faq__summary:after {
+    display: inline-block;
+    content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-align: right;
+    padding-bottom: 20px;
+  }
+  
+details[open] .faq__summary:after {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    content: "";
+    background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    transform:scaleY(-1);
+}
+  
+
+.faq__question {
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+}
+
+.faq__question {
+    display: inline-block;
+    margin: 5px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.faq__summary {
+    color: var(--blue-dark);
+    font-size: 1.4rem; 
+}
+
+.faq__summary:focus {
+    color: var(--orange); 
+    font-weight: bold;
+    outline: none;
+}
+
+.faq__text {
+    color: var(--blue-mid);
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+    margin: 10px 0 0 0;
+}
+
+.hidden-lg { display: block; }
+    
+.visible-lg { display: none; }
+
+
+@media (min-width: 900px) {
+    .faq {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-width: 900px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .faq__logo__holder { 
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .faq__holder {
+        margin: 0 50px;
+        padding: 70px 0;
+        max-width: 350px;
+        width: 350px;
+    }
+
+    .faq__logo {
+        display: flex;
+        align-items: center;
+        background-image: url(https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-desktop.svg), url(https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-desktop.svg);
+        background-position: -75px center, -571px -270px;
+        background-size: 100%, 200%;
+        height: 100%;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+        width: 525px;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .faq__heading {
+        text-align: left;
+    }
+
+    .hidden-lg { display: none; }
+
+    .visible-lg { 
+        display: block; 
+        position: absolute;
+        margin-top: 120px;
+        left: -80px;    
+    }
+
+    .faq__text {
+        margin: 0 0 10px 0;
+    }
+
+    .faq__detail {
+        margin: 10px 0 0 0 0;
+        padding: 0;
+    }
+}
+   /*FAQ ENDS*/
      * {
       /*Cards css*/
 
@@ -247,90 +461,6 @@ body {
   }
 }
 
-
-/* Main Footer */
-footer .main-footer{ padding: 20px 0;  background: #A75E2F;}
-footer ul{  padding-left: 0;  list-style: none;}
-
-/* Copy Right Footer */
-.footer-copyright {  background: #222; padding: 5px 0;}
-.footer-copyright .logo {    display: inherit;}
-.footer-copyright nav {    float: right;    margin-top: 5px;}
-.footer-copyright nav ul { list-style: none; margin: 0;  padding: 0;}
-.footer-copyright nav ul li { border-left: 1px solid #505050;  display: inline-block;  line-height: 12px;   margin: 0;  padding: 0 8px;}
-.footer-copyright nav ul li a{   color: #969696;}
-.footer-copyright nav ul li:first-child { border: medium none; padding-left: 0;}
-.footer-copyright p {   color: #969696;   margin: 2px 0 0;}
-
-/* Footer Top */
-.footer-top{   background: #252525; padding-bottom: 30px;   margin-bottom: 30px; border-bottom: 3px solid #222;}
-
-/* Footer transparent */
-footer.transparent .footer-top, footer.transparent .main-footer{  background: transparent;}
-footer.transparent .footer-copyright{  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3) ;}
-
-/* Footer light */
-footer.light .footer-top{  background: #f9f9f9;}
-footer.light .main-footer{ background: #f9f9f9;}
-footer.light .footer-copyright{  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3) ;}
-
-/* Footer 4 */
-.footer- .logo {    display: inline-block;}
-
-/*==================== 
-   Widgets 
-====================== */
-.widget{ padding: 20px; margin-bottom: 40px;}
-.widget.widget-last{ margin-bottom: 0px;}
-.widget.no-box{   padding: 0; background-color: transparent;   margin-bottom: 40px;
-   box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;}
-.widget.subscribe p{ margin-bottom: 18px;}
-.widget li a{  color: #F8C8C6;}
-.widget li a:hover{  color: #4b92dc;}
-.widget-title {margin-bottom: 20px;}
-.widget-title span {background: #839FAD none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
-.widget-title span::after {background: inherit;content: "";height: inherit;    position: absolute;top: -4px;width: 50%;}
-.widget-title.text-center span,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;}
-.widget .badge{   float: right;  background: #7f7f7f;}
-
-.typo-light h1, 
-.typo-light h2, 
-.typo-light h3, 
-.typo-light h4, 
-.typo-light h5, 
-.typo-light h6,
-.typo-light p,
-.typo-light div,
-.typo-light span,
-.typo-light small{   color: #fff;}
-
-ul.social-footer2 {  margin: 0;padding: 0;   width: auto;}
-ul.social-footer2 li {display: inline-block;padding: 0;}
-ul.social-footer2 li a:hover {background-color:#ff8d1e;}
-ul.social-footer2 li a {display: block;   height:30px;width: 30px;text-align: center;}
-.btnn{background-color: #ff8d1e; color:#fff;}
-.btnn:hover, .btnn:focus, .btnn.active {background: #4b92dc;color: #fff;
--webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
--moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
--ms-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
--o-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
--webkit-transition: all 250ms ease-in-out 0s;
--moz-transition: all 250ms ease-in-out 0s;
--ms-transition: all 250ms ease-in-out 0s;
--o-transition: all 250ms ease-in-out 0s;
-transition: all 250ms ease-in-out 0s;
-
-}
-@media only screen and (max-width: 768px){
-  footer, .widget{
-    text-align: center;
-  }
-  span{
-    margin-left: 37vw;
-    text-align: center;
-  }
-}
 /**/
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
@@ -406,13 +536,13 @@ transition: all 250ms ease-in-out 0s;
   background-image: url("https://www.digitalhrtech.com/wp-content/uploads/2018/10/AdobeStock_113080915-1-Converted.jpg");
 }
 .card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url("img/product.jpg");
 }
 .card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url("https://thumbs.dreamstime.com/b/q-question-answer-to-users-to-get-feedback-mobile-survey-apps-to-improve-service-fill-out-essay-questionnaire-flat-165708071.jpg");
 }
 .card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  background-image: url("https://media.istockphoto.com/vectors/thin-line-design-concept-for-faq-website-banner-vector-id510855358?b=1&k=6&m=510855358&s=612x612&w=0&h=rvDE8lX2dfICtPR569mYdDs-Kb9MI9BaQ20RkoEJiCY=");
 }
 
 .content {
@@ -545,13 +675,232 @@ transition: all 250ms ease-in-out 0s;
     width: 95vw;
   }
 }
+/*Navbar*/
+.image {
+  background-color: #490D40;
+  background: url("img/cow.jpg") no-repeat center center;
+  background-size: cover;
+  height: 570px;
+  margin-top: -20px;
+  opacity: 0.8;
+}
+.image .heading {
+  color: black;
+  text-align: center;
+  padding-top: 200px;
+}
+.image p {
+  text-align: center;
+  padding: 20px 60px;
+}
+.image p .btn {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  
+  font-size: 1.2em;
+}
+.image p .btn:hover {
+  color: #C57ED3;
+  border-color: #C57ED3;
+}
+.navbar {
+  height: 80px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
+  z-index: 100;
+}
+
+.navbar-default .navbar-brand {
+  margin-top: 10px;
+  color: white;
+}
+.navbar-default .navbar-brand:hover {
+  color: #C57ED3;
+  border: 1px solid #C57ED3;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  margin: 10px 5px 5px 5px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  border: 1px solid #C57ED3;
+}
+.navbar-default .navbar-nav > li > a:visited {
+  color: #C57ED3;
+  text-decoration: none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: #DC7633;
+}
+.navbar-default .navbar-toggle {
+  border-color: #C57ED3;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #DC7633;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  color: #C57ED3;
+  background-color: #C57ED3;
+}
+.navbar-default .navbar-collapse.collapse.in ul {
+  background-color: #DC7633;
+}
+
+/* Solid class attached on scroll past first section */
+.navbar.solid {
+  background-color: #DC7633;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+.navbar.solid .navbar-brand {
+  color: white;
+  transition: color 1s ease 0s;
+}
+.navbar.solid .navbar-nav > li > a {
+  color: white;
+  transition: color 1s ease 0s;
+}
+/*footer*/
+
+
+/* Main Footer */
+footer .main-footer{ padding: 20px 0;  background: #A75E2F;}
+footer ul{  padding-left: 0;  list-style: none;}
+
+/* Copy Right Footer */
+.footer-copyright {  background: #222; padding: 5px 0;}
+.footer-copyright .logo {    display: inherit;}
+.footer-copyright nav {    float: right;    margin-top: 5px;}
+.footer-copyright nav ul { list-style: none; margin: 0;  padding: 0;}
+.footer-copyright nav ul li { border-left: 1px solid #505050;  display: inline-block;  line-height: 12px;   margin: 0;  padding: 0 8px;}
+.footer-copyright nav ul li a{   color: #969696;}
+.footer-copyright nav ul li:first-child { border: medium none; padding-left: 0;}
+.footer-copyright p {   color: #969696;   margin: 2px 0 0;}
+
+/* Footer Top */
+.footer-top{   background: #252525; padding-bottom: 30px;   margin-bottom: 30px; border-bottom: 3px solid #222;}
+
+/* Footer transparent */
+footer.transparent .footer-top, footer.transparent .main-footer{  background: transparent;}
+footer.transparent .footer-copyright{  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3) ;}
+
+/* Footer light */
+footer.light .footer-top{  background: #f9f9f9;}
+footer.light .main-footer{ background: #f9f9f9;}
+footer.light .footer-copyright{  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3) ;}
+
+/* Footer 4 */
+.footer- .logo {    display: inline-block;}
+
+/*==================== 
+   Widgets 
+====================== */
+.widget{ padding: 20px; margin-bottom: 40px;}
+.widget.widget-last{ margin-bottom: 0px;}
+.widget.no-box{   padding: 0; background-color: transparent;   margin-bottom: 40px;
+   box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;}
+.widget.subscribe p{ margin-bottom: 18px;}
+.widget li a{  color: #F8C8C6;}
+.widget li a:hover{  color: #4b92dc;}
+.widget-title {margin-bottom: 20px;}
+.widget-title span {background: #839FAD none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
+.widget-title span::after {background: inherit;content: "";height: inherit;    position: absolute;top: -4px;width: 50%;}
+.widget-title.text-center span,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;}
+.widget .badge{   float: right;  background: #7f7f7f;}
+
+.typo-light h1, 
+.typo-light h2, 
+.typo-light h3, 
+.typo-light h4, 
+.typo-light h5, 
+.typo-light h6,
+.typo-light p,
+.typo-light div,
+.typo-light span,
+.typo-light small{   color: #fff;}
+
+ul.social-footer2 {  margin: 0;padding: 0;   width: auto;}
+ul.social-footer2 li {display: inline-block;padding: 0;}
+ul.social-footer2 li a:hover {background-color:#ff8d1e;}
+ul.social-footer2 li a {display: block;   height:30px;width: 30px;text-align: center;}
+.btnn{background-color: #ff8d1e; color:#fff;}
+.btnn:hover, .btnn:focus, .btnn.active {background: #4b92dc;color: #fff;
+-webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-ms-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-o-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+-webkit-transition: all 250ms ease-in-out 0s;
+-moz-transition: all 250ms ease-in-out 0s;
+-ms-transition: all 250ms ease-in-out 0s;
+-o-transition: all 250ms ease-in-out 0s;
+transition: all 250ms ease-in-out 0s;
+
+}
+@media only screen and (max-width: 768px){
+  footer, .widget{
+    text-align: center;
+  }
+  span{
+    margin-left: 37vw;
+    text-align: center;
+  }
+}
+
 
    </style>
    
 </head>
 <body><!--Navbar-->
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        // Transition effect for navbar 
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 500) { 
+              $('.navbar').addClass('solid');
+          } else {
+              $('.navbar').removeClass('solid');
+          }
+        });
+});
+  </script>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Pashu Bazar</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">About</a></li>
+            <li><a href="test.html">Buy/Sell</a></li>
+            <li><a href="#customer">Customer Experience</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="image">
+   <h1 class="heading">Pashu Bazar</h1>
+   <p ><a href="#about"><button class="btn btn-large">Know Us</button></a></p>
+</div>
   <!--Cards-->
+  <section  id="about"></section>
   <section style="background-color: #FFFDC4 ;">
 <div class="customer-feedback">
     <div class="container text-center">
@@ -569,29 +918,29 @@ transition: all 250ms ease-in-out 0s;
   <div class="card">
     <div class="content">
       <h2 class="title">The Organization</h2>
-      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <p class="copy">Click on the button below to know about TARF</p>
       <button class="btn">Read More</button>
     </div>
   </div>
   <div class="card">
     <div class="content">
-      <h2 class="title">To The Beach</h2>
-      <p class="copy">Plan your next beach trip with these fabulous destinations</p>
-      <button class="btn">View Trips</button>
+      <h2 class="title">Our Products</h2>
+      <p class="copy">To know about out products click on read more</p>
+      <button class="btn">Read More</button>
     </div>
   </div>
   <div class="card">
     <div class="content">
-      <h2 class="title">Desert Destinations</h2>
-      <p class="copy">It's the desert you've always dreamed of</p>
-      <button class="btn">Book Now</button>
+      <h2 class="title">Services</h2>
+      <p class="copy">Read about our services offered</p>
+      <button class="btn">Read More</button>
     </div>
   </div>
   <div class="card">
     <div class="content">
-      <h2 class="title">Explore The Galaxy</h2>
-      <p class="copy">Seriously, straight up, just blast off into outer space today</p>
-      <button class="btn">Book Now</button>
+      <h2 class="title">Contact Us </h2>
+      <p class="copy">Click on the button below if you have any queries</p>
+      <button class="btn">FAQ</button>
     </div>
   </div>
 </main>
@@ -700,7 +1049,7 @@ jQuery(function ($) {
   }
 });
 </script>
-
+<section id="customer"></section>
 <div class="wrapper">
     <div class="counter col_fourth">
       <i class="fa fas fa-users fa-2x"></i>
@@ -723,7 +1072,7 @@ jQuery(function ($) {
     <div class="counter col_fourth end">
       <i class="fa fa-bug fa-2x"></i>
       <h2 class="timer count-title count-number" data-to="157" data-speed="20000"></h2>
-      <p class="count-text ">SomeText GoesHere</p>
+      <p class="count-text ">Centres</p>
     </div>
 </div>
 
@@ -826,7 +1175,7 @@ jQuery(function ($) {
       <div class="row">
         <div class="col-sm-offset-2 col-sm-8">
           <div>
-            <h2 class="section-title">What Clients Say</h2>
+            <h2 class="section-title">What Customers Say</h2>
           </div>
         </div><!-- /End col -->
       </div><!-- /End row -->
@@ -902,7 +1251,42 @@ jQuery(function ($) {
     </div><!-- /End container -->
   </div><!-- /End customer-feedback -->
 </section>
+<!--FAQ0-->
 
+<!--FAQ Help-->
+<section id="help" style="color: white">
+  <main class="faq">
+        
+  <div class="faq__logo__holder">
+  <div class="faq__logo">
+    <img src="https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-mobile.svg" alt="woman at a computer" class="faq__logo__image hidden-lg">
+    <img src="https://bobmatyas.github.io/fm-faq-accordion/images/illustration-box-desktop.svg" alt="" class="faq__logo__image visible-lg">
+  </div>
+  </div>
+  
+  <div class="faq__holder">
+  <h1 class="faq__heading">FAQ</h1>
+ 
+  <details class="faq__detail">
+      <summary  class="faq__summary"><span class="faq__question" style="color: white">Q1?</span></summary>
+      <p class="faq__text" style="color: white">Answer .</p>
+  </details>
+
+  <details class="faq__detail">
+    <summary  class="faq__summary"><span class="faq__question" style="color: white">Q2?</span></summary>
+    <p class="faq__text" style="color: white">Answer 2</p>
+  </details>  
+
+  <details class="faq__detail">
+    <summary  class="faq__summary"><span class="faq__question" style="color: white">Q3?</span></summary>
+    <p class="faq__text" style="color: white">Answer 3</p>
+    
+  </details>  
+    
+
+</div>
+</main> 
+</section>
 <!--Footer-->
 <footer id="footer" class="footer-1">
 <div class="main-footer widgets-dark typo-light">
@@ -913,7 +1297,7 @@ jQuery(function ($) {
 <div class="widget subscribe no-box">
 <h5 class="widget-title">PASHU BAZAR<span></span></h5>
 <p>About the company, little description goes here.. </p>
-<img src="img/logo.jpeg" style="border-radius: 50%;width: 7vw;">
+<img src="img/logo.jpeg" style="border-radius: 50%;width: 7vw; text-align: center;">
 </div>
 </div>
 
